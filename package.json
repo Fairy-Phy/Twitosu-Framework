@@ -1,0 +1,48 @@
+{
+  "name": "statosu_framework",
+  "version": "1.0.0",
+  "description": "Statosu create image framework",
+  "homepage": "https://github.com/Fairy-Phy/Statosu-Framework#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Fairy-Phy/Statosu-Framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fairy-Phy/Statosu-Framework/issues"
+  },
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build_test": "jest test/test.js",
+    "test": "jest test/test.ts --coverage",
+    "debug": "npm run build && npm run build_test"
+  },
+  "author": "(Fairy)Phy",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.8",
+    "@types/request-promise": "^4.1.46",
+    "jest": "^25.2.4",
+    "ts-jest": "^25.3.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "log4js": "^6.1.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  },
+  "jest": {
+    "notify": true,
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    }
+  }
+}

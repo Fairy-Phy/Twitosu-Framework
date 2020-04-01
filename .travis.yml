@@ -1,0 +1,32 @@
+dist: bionic
+
+language: node_js
+node_js:
+  - lts/*
+  - stable
+
+env:
+  global:
+  - secure: NkIiUhudyxDnkxlq5x5nMLBrFbsT2jL6/CPTHk6TeFLV7hXts7MNu2U02eDV39LeNqcRDn/nVLoEb3l8o6F+0hPGx03/0QouUkU4UAd+mPiCWXmLxwgw1nSSor3sBS3ScMu//Uuzl+7Rrtw5syzaBWo8C2fTBFO+qvi3gCdwT+ZqaJXtr0MuMA6KSvH2Gz/S7W38ZTXJNx15sh438BQPNDjuGnuN2C03iLcQew8/ioBRuvZALh1jn96AIZxQQQnid0c9bgWbH9bqvauLxb2QuZFvjj/OhzgYc7YNl0taJqPAkYXmqkqWFj0Unqyw4lpS6PiT/D5msdC+/tFRa98eoO3/4KqV+DNs3HDjXD6W7F6I4SzXxnWdIktUezFGYEHaedJdTL05tcIL7dJNcTlYWSyfJeqWO47ku6V3dLytFu8vb7SWPCUvZtJ/PzaJ8RFYVNJr4Ul8UEvbGV+POx8KGuSfNcRjpIUbbQCODeP/BfbcimtX2YBxAJrO2vRBLdPNlEfsGb7jgHojdi43EAb5nfkXKPcHSldLNbQhR8fmv5wMCTv6YP1fVFd6s8dDWaQdSHNIYt/oKoG3oCnpxuSq6jcbeitUljcCnkvvkzWQC5op9Un+0yspgcOmYnR8z1KRv8BgFyZjbTJ4r9DUT7n51h9vSqDk+oxMfnCi5vshyYw=
+  - secure: cTjNgPPM5J6U77N+RvcPqJ5m4btRZonjD8zvAichAIZi0jcoSLmunjygpQPBYqcA0qWdUs+HKfDxIOyegkLnrZt9+Fets3nx+WBfSQPmVrbxafiT/kiYIMv2GSIXcKkhIDqovWkug7XBCraHY/wfqbY+HdgDo+RgDS0vFMVCx081Edn/611q+ZIKVLtO952xoSWldp3b/kX53MnXOAEh//DF+TE+G9MBrftlVAeAMx+zzpmbPBTZpnIrVO3lzADMQxiidMRCwgMmYoKDhmmwLxQ7lUQArBI1JXLJnCtLvPCTdFU0namBIwdNgYXzTkO+4Dg+53ai2vTp9AfmqmVS8zLkxCmEnGyNzYJnnedCvmWl1A5C/Ft9P4bk9gKKuwGl25zRO+drfsyrkGsTdZkpwZq/CqhHbRJkyWCjcJHPpygizq2J0zFDsvyPXiEFT6DVQ3mADwzKhvW7L7F3BmBnGrIfkh83/9wXw9Qt3Rv5JwQ8He5TzCAI5HsIsqOJGAnWpWdeRvLm4PRnwXKl64oNhA9ktMCirvvHUHEHUum3BKd/chH6OAYKuQO0wd2GVyeGY97kNpZOPbsx9BSmQLNymmdfEbhnHOgsq9OAWyxaan782idH2haY6sMVEq0JnCS1AdfuXIcPwZqs7i3RxZrTEqIoTYbKu9QurOumhVedzDw=
+  - secure: Rk6D8pcNEmhiqTfuLC67T0jGobuGh+xKH9lfTYEWWf403TcZCTzLjhOTvKj++NidLgtyRRrl0WXRAhb+kQ/DxuG9Q9O0bAGcz1SY47BIdIx7RyBiJdvalbZZjPlyd5ulh95eBFwZ4fKNDDuK8Pz6Xu6vXXtVBjOPjfrIAg73SFejIJf59uQR7+lhdrCbOSjQTzbRfKC5nlis2EyW8LrYVei6e6khsZdIqKwZ3MLoMB/rsoGf4tT6idve20qX4krJ1qnpCWx4AObp5dRyl9eWO+PcXkoFpfnKJfTb9nkeZPuPXOYKoflR79AYJqPEEK1smo9yMsiYtKw2pJjUlkVwHc69euMtZGJbnjYilVVhodBroqq19x85EGZbNaa/TbSHxCQj5JrcoJcspNPJYIrY7PmupXJSzC5PFYElDriLGWTGt9ol2Fd3p6U8M5j6Q3qI2vjIcmKQi7XT+kT8ONqqQQ+czxdBGFbAjGHfcGomB2On3w6ZneStbbIlQkW+fK3lOjXgyxNnXgKv3JS1wtU7gWFHX1OgYe/RTAKVQPuKbshE/ubnSE7Rj5+AtXDWF/7gURHH4Xgg6Zw8XOB3thCgMI4tCw8BUI1GUd00B9xXgqbR2MSwUFd98Z8eEI7tyK0H8Zs+aK0TzxtU93HDVO/o+IwIK5I6ldgl8fiqnGH4QsM=
+  - secure: niGN6o5UyQGCg9mrekUWu6+ZWslHZoPrEmivQwS92F9Vq6RSXrvAEg24wUtClrR3HDhSOmrRdWBDpTwtey9lcelYyvhUwqaxmHyxXvy25KxnOstUt3tJliZV/BfH/iSqHEFn1m8nzoBujzWeDVW9bSEiOjqhJA0AsSAWOelunbNZqLF2RWL+rHBOer3xzXPA/90wTmXtWWC2wCmQW/Xcu3VlCStLb/qvOqjyggBvonBvdmkifQgLc6npllraHgpVVXEkpgUrU3NbEtB7TH4Ly0FPP2JAHnwHxspghDhs/jay3TSSs2R/qsslN3vH3caTj0AthZ2ul8L/EOPx/k8k00Llgr8lYQ4UlmrqSR0UNi4XE0kSq26RpXXRSCSbqxo6dbgXGuz5XcQIbAh1q+6M9z+lCMdL6oFccBPy8r0Q9J+SdosVMpF/NJMLvwrf3afYfHxrGi7tcavdtTFcZr163Xn2jqDnnp3P+M+gU4aDHUC8tjpoU+SWvmo6ncsuq4FoVavtpbQTKNAUNm7RnZUtoUyes5RcEsg0J3SLnat/gaAoGfw4MMh1/XoQAaWYZjkYjXv1QhJK6mUWwJB0DImydk/Bk5PzGo7O4jgJMP/4fjcB0Py1+34sXCxvefkSUchFm3TUJNMf3aTjgWaQ+FJ497oIBg8ga7Ym3gzsZBMVFO8=
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev -y
+  - sudo apt-get update
+
+install:
+  - npm install
+  - npm install -g imgur
+  - npm install -g coveralls
+
+script:
+  - npm run build
+  - npm run build_test -- --ci
+  - npm test -- --ci
+
+after_script:
+  - echo "Result image url:" && imgur --save $IMGUR_CLIENT_ID && imgur test/Test_std.png test/Test_taiko.png test/Test_ctb.png test/Test_mania.png test/Test_ripple.png test/Test_no_rank.png test/Test_no_db_data.png test/Test_db_data.png test/Test_level_shape.png test/Test_undefined_icon1.png test/Test_undefined_icon2.png test/Test_undefined_icon3.png test/Test_undefined_icon4.png test/test_image.png
+  - coveralls < coverage/lcov.info
