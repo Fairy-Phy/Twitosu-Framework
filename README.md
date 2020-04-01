@@ -1,6 +1,6 @@
 # Statosu Framework
 
-[![Build Status](https://travis-ci.org/Fairy-Phy/Statosu-Framework.svg?branch=master)](https://travis-ci.org/Fairy-Phy/Statosu-Framework)
+[![Build Status](https://travis-ci.com/Fairy-Phy/Statosu-Framework.svg?branch=master)](https://travis-ci.com/Fairy-Phy/Statosu-Framework)
 [![Coverage Status](https://coveralls.io/repos/github/Fairy-Phy/Statosu-Framework/badge.svg?branch=master)](https://coveralls.io/github/Fairy-Phy/Statosu-Framework?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
