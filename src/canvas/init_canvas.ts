@@ -13,7 +13,7 @@ class init_canvas {
 		logger.debug("Start initialize canvas");
 
 		registerFont(__dirname + "/" + "../../asset/font/Exo-2.0/fonts/otf/Exo2-Regular.otf", { family: "Exo 2" });
-		registerFont(__dirname + "/" + "../../asset/font/comfortaa/fonts/OTF/Comfortaa-Regular.otf", { family: "Comfortaa" });
+		registerFont(__dirname + "/" + "../../asset/font/Comfortaa/fonts/OTF/Comfortaa-Regular.otf", { family: "Comfortaa" });
 		if (existsSync(__dirname + "/" + "../../asset/font/Torus-Light.otf")) registerFont(__dirname + "/" + "../../asset/font/Torus-Light.otf", { family: "Torus" });
 		this.image = createCanvas(image_width, image_height);
 		
