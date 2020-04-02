@@ -1,8 +1,16 @@
 {
   "name": "statosu_framework",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Statosu create image framework",
-  "keywords": [ "statosu", "framework", "osu", "status", "image", "canvas", "twitter" ],
+  "keywords": [
+    "statosu",
+    "framework",
+    "osu",
+    "status",
+    "image",
+    "canvas",
+    "twitter"
+  ],
   "homepage": "https://github.com/Fairy-Phy/Statosu-Framework#readme",
   "repository": {
     "type": "git",
