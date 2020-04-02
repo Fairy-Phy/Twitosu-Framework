@@ -1,6 +1,6 @@
-[submodule "asset/font/Comfortaa"]
-	path = asset/font/Comfortaa
-	url = https://github.com/googlefonts/comfortaa.git
 [submodule "asset/font/Exo-2.0"]
 	path = asset/font/Exo-2.0
 	url = https://github.com/NDISCOVER/Exo-2.0.git
+[submodule "asset/font/Comfortaa"]
+	path = asset/font/Comfortaa
+	url = https://github.com/Fairy-Phy/comfortaa.git
