@@ -8,9 +8,9 @@ import { loadImage } from "canvas";
 class text {
 	/**
 	 * Draw texts
-	 * @param canvas 
-	 * @param api_osu_status 
-	 * @param db_osu_status 
+	 * @param canvas
+	 * @param api_osu_status
+	 * @param db_osu_status
 	 */
 	public static async draw(canvas: init_canvas, api_osu_status: osu_status_entity, db_osu_status: osu_status_entity): Promise<void> {
 		logger.debug("Start draw texts");
@@ -119,6 +119,7 @@ class text {
 
 		if (after_pp_rank == 0) after_pp_rank = "No rank";
 
+		/* istanbul ignore next */
 		if (after_pp_rank < 10) canvas.image_edit.fillStyle = color.red_diamond;
 		else if (after_pp_rank < 100) canvas.image_edit.fillStyle = color.green_diamond;
 		else if (after_pp_rank < 1000) canvas.image_edit.fillStyle = color.diamond;
@@ -174,6 +175,7 @@ class text {
 
 		if (after_pp_country_rank == 0) after_pp_country_rank = "No rank";
 
+		/* istanbul ignore next */
 		if (after_pp_country_rank < 10) canvas.image_edit.fillStyle = color.red_diamond;
 		else if (after_pp_country_rank < 100) canvas.image_edit.fillStyle = color.green_diamond;
 		else if (after_pp_country_rank < 1000) canvas.image_edit.fillStyle = color.diamond;

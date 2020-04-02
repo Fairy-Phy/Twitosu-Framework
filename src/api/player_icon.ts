@@ -5,8 +5,8 @@ import logger from '../utils/logger';
 class player_icon {
 	/**
 	 * Get osu! player icon
-	 * @param id 
-	 * @param server 
+	 * @param id
+	 * @param server
 	 */
 	public static async get(id: string, server: number): Promise<Image> {
 		logger.debug("Start get osu! player icon");
@@ -17,19 +17,20 @@ class player_icon {
 		};
 
 		const request_result: any = await request(icon_get).catch(err => {
+			/* istanbul ignore next */
 			if (logger.isDebugEnabled()) logger.error(err);
 			logger.warn("Icon could not get");
 
 			return undefined;
 		});
 
-		if (request_result == undefined) return await loadImage(__dirname + "/" + "../../asset/icon/avatar-guest.png");
+		if (request_result == undefined) return loadImage(__dirname + "/" + "../../asset/icon/avatar-guest.png");
 
 		const buffer: Buffer = Buffer.from(request_result, "utf8");
 		logger.debug(buffer);
 
 		logger.debug("End get osu! player icon");
-		return await loadImage(buffer);
+		return loadImage(buffer);
 	}
 }
 

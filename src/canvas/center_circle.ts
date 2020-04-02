@@ -6,7 +6,7 @@ import logger from "../utils/logger";
 class center_circle {
 	/**
 	 * Draw center circle
-	 * @param canvas 
+	 * @param canvas
 	 */
 	public static async draw(canvas: init_canvas): Promise<void> {
 		logger.debug("Start draw center circle");

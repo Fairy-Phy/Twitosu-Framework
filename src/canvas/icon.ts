@@ -6,8 +6,8 @@ import logger from '../utils/logger';
 class icon {
 	/**
 	 * Draw player icon
-	 * @param canvas 
-	 * @param icon_image 
+	 * @param canvas
+	 * @param icon_image
 	 */
 	public static async draw(canvas: init_canvas, icon_image: Image): Promise<void> {
 		logger.debug("Start draw icon");

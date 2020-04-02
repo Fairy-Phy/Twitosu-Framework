@@ -14,12 +14,15 @@ class osu_status_entity extends osu_api_entity implements osu_status_interface {
 	constructor(osu_status: any | osu_api_entity, twitter_config?: twitter_config_entity) {
 		super(osu_status);
 
-		if (twitter_config == undefined || twitter_config == null) {
-			if (osu_status.mode == null || osu_status.mode == undefined) this.mode = 0;
-			else this.mode = parseInt(osu_status.mode);
-
+		if (twitter_config == undefined) {
+			// if not exist import DB data
 			if (osu_status.server == null || osu_status.server == undefined) this.server = 0;
-			else this.server = parseInt(osu_status.server);
+			else if (parseInt(osu_status.server, 10) > 1 || parseInt(osu_status.server, 10) < 0 || isNaN(parseInt(osu_status.server, 10))) this.server = 0;
+			else this.server = parseInt(osu_status.server, 10);
+
+			if (osu_status.mode == null || osu_status.mode == undefined) this.mode = 0;
+			else if (parseInt(osu_status.mode, 10) > 3 || parseInt(osu_status.mode, 10) < 0 || isNaN(parseInt(osu_status.mode, 10))) this.mode = 0;
+			else this.mode = parseInt(osu_status.mode, 10);
 		}
 		else {
 			this.mode = twitter_config.osu_mode;

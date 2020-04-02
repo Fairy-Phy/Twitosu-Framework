@@ -28,5 +28,5 @@ script:
   - npm test -- --ci
 
 after_script:
-  - echo "Result image url:" && imgur --save $IMGUR_CLIENT_ID && imgur test/Test_std.png test/Test_taiko.png test/Test_ctb.png test/Test_mania.png test/Test_ripple.png test/Test_no_rank.png test/Test_no_db_data.png test/Test_db_data.png test/Test_level_shape.png test/Test_undefined_icon1.png test/Test_undefined_icon2.png test/Test_undefined_icon3.png test/Test_undefined_icon4.png test/test_image.png
+  - echo "Result image url:" && imgur --save $IMGUR_CLIENT_ID && imgur test/Test_std.png test/Test_taiko.png test/Test_ctb.png test/Test_mania.png test/Test_other.png test/Test_ripple.png test/Test_no_rank.png test/Test_no_db_data.png test/Test_db_data.png test/Test_level_shape.png test/Test_undefined_icon1.png test/Test_undefined_icon2.png test/Test_undefined_icon3.png test/Test_undefined_icon4.png test/test_image.png
   - coveralls < coverage/lcov.info

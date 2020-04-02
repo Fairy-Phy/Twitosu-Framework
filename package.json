@@ -14,8 +14,8 @@
   "types": "./build/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "build_test": "jest test/test.js",
-    "test": "jest test/test.ts --coverage",
+    "build_test": "jest test/build.test.js",
+    "test": "jest test/throw.test.ts test/api.test.ts test/draw.test.ts test/all.test.ts --coverage",
     "debug": "npm run build && npm run build_test"
   },
   "author": "(Fairy)Phy",

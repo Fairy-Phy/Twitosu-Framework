@@ -32,7 +32,7 @@ export async function create_image(db_twitter_config: any, db_osu_status: any, o
 	const api_osu_status_data: osu_status_entity = await osu_status.get(twitter_config_data, osu_api_key, ripple_api_key);
 	logger.debug(api_osu_status_data);
 
-	const db_osu_status_data: osu_status_entity = db_osu_status == null || db_osu_status == undefined ? api_osu_status_data : new osu_status_entity(db_osu_status);
+	const db_osu_status_data: osu_status_entity = db_osu_status == null || db_osu_status == undefined ? new osu_status_entity(api_osu_status_data) : new osu_status_entity(db_osu_status);
 	logger.debug(db_osu_status_data);
 
 	const icon_image: Image = await player_icon.get(api_osu_status_data.user_id, twitter_config_data.osu_server);

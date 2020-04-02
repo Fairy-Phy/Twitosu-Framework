@@ -5,7 +5,7 @@ import logger from "../utils/logger";
 class background {
 	/**
 	 * Draw background
-	 * @param canvas 
+	 * @param canvas
 	 */
 	public static async draw(canvas: init_canvas): Promise<void> {
 		logger.debug("Start draw background");

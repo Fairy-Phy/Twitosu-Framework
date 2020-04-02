@@ -5,8 +5,8 @@ import { loadImage, Image } from 'canvas';
 class level_shape {
 	/**
 	 * Draw level shape
-	 * @param canvas 
-	 * @param level 
+	 * @param canvas
+	 * @param level
 	 */
 	public static async draw(canvas: init_canvas, level: number): Promise<void> {
 		logger.debug("Start draw level shape");

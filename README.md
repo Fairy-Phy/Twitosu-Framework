@@ -1,8 +1,9 @@
 # Statosu Framework
 
-[![Build Status](https://travis-ci.com/Fairy-Phy/Statosu-Framework.svg?branch=master)](https://travis-ci.com/Fairy-Phy/Statosu-Framework)
-[![Coverage Status](https://coveralls.io/repos/github/Fairy-Phy/Statosu-Framework/badge.svg?branch=master)](https://coveralls.io/github/Fairy-Phy/Statosu-Framework?branch=master)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<a href="https://travis-ci.com/Fairy-Phy/Statosu-Framework"><img alt="Build Status" src="https://img.shields.io/travis/com/Fairy-Phy/Statosu-Framework/master?style=flat-square"></a>
+<a href="https://coveralls.io/github/Fairy-Phy/Statosu-Framework?branch=master"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/Fairy-Phy/Statosu-Framework/master?style=flat-square"></a>
+<a href="https://www.codefactor.io/repository/github/fairy-phy/statosu-framework/overview/master"><img src="https://img.shields.io/codefactor/grade/github/Fairy-Phy/statosu-framework/master?style=flat-square" alt="CodeFactor" /></a>
+<a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square"></a>
 
 Statosu create image framework. I reworked the image creation of Statosu created last year as a framework!
 

@@ -7,8 +7,8 @@ import ripple_api_converter from "../utils/ripple_api_converter";
 class osu_status {
 	/**
 	 * Get osu! player status from api
-	 * @param twitter_config_data 
-	 * @param api_key 
+	 * @param twitter_config_data
+	 * @param api_key
 	 */
 	public static async get(twitter_config_data: twitter_config_entity, osu_api_key: string, ripple_api_key: string): Promise<osu_status_entity> {
 		logger.debug("Start get osu! player status");
@@ -28,6 +28,7 @@ class osu_status {
 			return resolve;
 		})
 		.catch(err => {
+			/* istanbul ignore next */
 			if (logger.isDebugEnabled()) logger.error(err);
 			logger.warn("Could not get player data");
 
