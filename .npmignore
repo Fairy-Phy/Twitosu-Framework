@@ -1,0 +1,10 @@
+.vscode/
+coverage/
+src/
+test/
+
+.gitmodules
+.travis.yml
+readme_image.png
+tsconfig.json
+*.tgz
