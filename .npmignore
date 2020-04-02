@@ -1,7 +1,23 @@
 .vscode/
+asset/font/*.otf
+asset/font/*.ttf
 coverage/
 src/
 test/
+
+asset/font/Comfortaa/documentation
+asset/font/Comfortaa/fonts/TTF
+asset/font/Comfortaa/old
+asset/font/Comfortaa/sources
+asset/font/Comfortaa/.gitignore
+asset/font/Comfortaa/DESCRIPTION.en_us.html
+
+asset/font/Exo-2.0/.github
+asset/font/Exo-2.0/fonts/ttf
+asset/font/Exo-2.0/fonts/vf
+asset/font/Exo-2.0/sources
+asset/font/Exo-2.0/.gitignore
+asset/font/Exo-2.0/requirements.txt
 
 .gitmodules
 .travis.yml

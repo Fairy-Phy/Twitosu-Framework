@@ -1,13 +1,14 @@
-# Statosu Framework
-
+<div align="center">
+<h1>Statosu Framework</h1>
 <a href="https://travis-ci.com/Fairy-Phy/Statosu-Framework"><img alt="Build Status" src="https://img.shields.io/travis/com/Fairy-Phy/Statosu-Framework/master?style=flat-square"></a>
 <a href="https://coveralls.io/github/Fairy-Phy/Statosu-Framework?branch=master"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/Fairy-Phy/Statosu-Framework/master?style=flat-square"></a>
 <a href="https://www.codefactor.io/repository/github/fairy-phy/statosu-framework/overview/master"><img src="https://img.shields.io/codefactor/grade/github/Fairy-Phy/statosu-framework/master?style=flat-square" alt="CodeFactor" /></a>
+<a href="https://packagephobia.now.sh/result?p=statosu_framework"><img alt="Install size" src="https://flat.badgen.net/packagephobia/install/statosu_framework"></a>
+<a href="https://www.npmjs.com/package/statosu_framework"><img alt="NPM Version" src="https://img.shields.io/npm/v/statosu_framework?style=flat-square"></a>
 <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square"></a>
-
-Statosu create image framework. I reworked the image creation of Statosu created last year as a framework!
-
-There is no npm package or yarn package because it is made exclusively for Statosu.
+<p>Statosu create image framework.</p>
+<p>I reworked the image creation of Statosu created last year as a framework!</p>
+</div>
 
 ## Installation
 
