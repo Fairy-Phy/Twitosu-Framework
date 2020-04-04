@@ -13,6 +13,7 @@ import image_size from '../src/canvas/config/image_size';
 import center_circle from '../src/canvas/center_circle';
 import level_shape from '../src/canvas/level_shape';
 import text from '../src/canvas/text';
+import mode_icon from '../src/canvas/mode_icon';
 
 // End init framework
 import * as fs from "fs";
@@ -30,8 +31,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = undefined;
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -51,11 +50,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_std.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -71,8 +69,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = undefined;
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -92,11 +88,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_taiko.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -112,8 +107,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = undefined;
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -133,11 +126,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_ctb.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -153,8 +145,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = undefined;
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -174,11 +164,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_mania.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -196,8 +185,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = undefined;
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -217,11 +204,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_no_rank.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -241,8 +227,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = undefined;
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -250,15 +234,10 @@ describe("create_image Test", (): void => {
 		logger.debug(twitter_config_data);
 	
 		const api_osu_status_data: osu_status_entity = await osu_status.get(twitter_config_data, osu_api_key, ripple_api_key);
-		api_osu_status_data.pp_rank = 1;
-		api_osu_status_data.pp_country_rank = 1;
 		logger.debug(api_osu_status_data);
 	
 		const db_osu_status_data: osu_status_entity = db_osu_status == null || db_osu_status == undefined ? new osu_status_entity(api_osu_status_data) : new osu_status_entity(db_osu_status);
 		logger.debug(db_osu_status_data);
-		db_osu_status_data.playcount = 99999;
-		db_osu_status_data.level = 999;
-		db_osu_status_data.accuracy = 100;
 	
 		const icon_image: Image = await player_icon.get(api_osu_status_data.user_id, twitter_config_data.osu_server);
 	
@@ -267,11 +246,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_other.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -289,8 +267,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = undefined;
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -310,11 +286,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_ripple.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -330,8 +305,6 @@ describe("create_image Test", (): void => {
 
 		const db_osu_status: any = {};
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -351,11 +324,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_no_db_data.png`, image_buffer, err => {
 			if (err != null) throw err;
@@ -394,8 +366,6 @@ describe("create_image Test", (): void => {
 			events: []
 		};
 
-		logger.debug("Start Statosu Framework");
-
 		if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 		if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 	
@@ -415,11 +385,10 @@ describe("create_image Test", (): void => {
 		await icon.draw(canvas, icon_image);
 		await center_circle.draw(canvas);
 		await level_shape.draw(canvas, api_osu_status_data.level);
+		await mode_icon.draw(canvas, api_osu_status_data.mode);
 		await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 	
 		const image_buffer: Buffer = canvas.image.toBuffer();
-	
-		logger.debug("End Statosu Framework");
 
 		fs.writeFile(__dirname + "/" + `./Test_db_data.png`, image_buffer, err => {
 			if (err != null) throw err;

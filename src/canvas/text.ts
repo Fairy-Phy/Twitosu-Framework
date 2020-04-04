@@ -17,7 +17,6 @@ class text {
 
 		await this.draw_title(canvas);
 		await this.draw_date(canvas);
-		await this.draw_mode(canvas, api_osu_status.mode);
 		await this.draw_name(canvas, api_osu_status.username);
 		await this.draw_global_rank(canvas, api_osu_status.pp_rank, db_osu_status.pp_rank);
 		await this.draw_country_rank(canvas, api_osu_status.pp_country_rank, db_osu_status.pp_country_rank, api_osu_status.country);
@@ -76,25 +75,6 @@ class text {
 		return;
 	}
 
-	private static async draw_mode(canvas: init_canvas, mode: number): Promise<void> {
-		canvas.image_edit.beginPath();
-
-		canvas.image_edit.font = '36px' + this.font_list;
-
-		canvas.image_edit.fillStyle = color.white;
-
-		canvas.image_edit.textAlign = "center";
-
-		const mode_list = ["Standard", "Taiko", "Catch the beat", "Mania"];
-
-		canvas.image_edit.shadowBlur = 5;
-		canvas.image_edit.shadowColor = color.black;
-
-		canvas.image_edit.fillText(`Mode: ${mode_list[mode]}`, image_size.image_width / 2, 195);
-
-		return;
-	}
-
 	private static async draw_name(canvas: init_canvas, username: string): Promise<void> {
 		canvas.image_edit.beginPath();
 
@@ -149,7 +129,7 @@ class text {
 				let update_global_space: number = 0,
 					update_global_string: string = `+${-(update_global_rank)}`;
 				if (global_rank_string.length - update_global_string.length == 0) update_global_space = 5;
-				else update_global_space = (global_rank_string.length - update_global_string.length) * -15;
+				else update_global_space = (global_rank_string.length - update_global_string.length) * -25;
 
 				canvas.image_edit.fillStyle = color.green;
 				canvas.image_edit.fillText(update_global_string, (image_size.image_width / 2) + global_rank_text.width + update_global_space, (image_size.image_height / 2) + 260);
@@ -158,7 +138,7 @@ class text {
 				let update_global_space: number = 0,
 					update_global_string: string = `-${update_global_rank}`;
 				if (global_rank_string.length - update_global_string.length == 0) update_global_space = 5;
-				else update_global_space = (global_rank_string.length - update_global_string.length) * -15;
+				else update_global_space = (global_rank_string.length - update_global_string.length) * -25;
 
 				canvas.image_edit.fillStyle = color.red;
 				canvas.image_edit.fillText(update_global_string, (image_size.image_width / 2) + global_rank_text.width + update_global_space, (image_size.image_height / 2) + 260);

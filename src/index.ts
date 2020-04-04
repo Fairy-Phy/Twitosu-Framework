@@ -11,6 +11,7 @@ import image_size from './canvas/config/image_size';
 import center_circle from './canvas/center_circle';
 import level_shape from './canvas/level_shape';
 import text from './canvas/text';
+import mode_icon from './canvas/mode_icon';
 
 /**
  * Create osu! player status image
@@ -21,8 +22,6 @@ import text from './canvas/text';
  * @returns Image buffer promise
  */
 export async function create_image(db_twitter_config: any, db_osu_status: any, osu_api_key: string, ripple_api_key: string): Promise<Buffer> {
-	logger.debug("Start Statosu Framework");
-
 	if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 	if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 
@@ -42,10 +41,24 @@ export async function create_image(db_twitter_config: any, db_osu_status: any, o
 	await icon.draw(canvas, icon_image);
 	await center_circle.draw(canvas);
 	await level_shape.draw(canvas, api_osu_status_data.level);
+	await mode_icon.draw(canvas, api_osu_status_data.mode);
 	await text.draw(canvas, api_osu_status_data, db_osu_status_data);
 
-	const image_buffer: Buffer = canvas.image.toBuffer();
-
-	logger.debug("End Statosu Framework");
-	return image_buffer;
+	return canvas.image.toBuffer();
 }
+
+/**
+ * Get osu! player status from api
+ * @param db_player_data - require osu_username, osu_mode, osu_server
+ * @param osu_api_key - Osu! official server api key
+ * @param ripple_api_key - Osu! ripple server api key
+ */
+export async function get_osu_status(db_player_data: any, osu_api_key: string, ripple_api_key: string): Promise<osu_status_entity> {
+	if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
+	if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
+
+	const player_data = new twitter_config_entity(db_player_data);
+	logger.debug(player_data);
+
+	return await osu_status.get(player_data, osu_api_key, ripple_api_key);
+};

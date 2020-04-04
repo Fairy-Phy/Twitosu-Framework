@@ -46,10 +46,8 @@ Quote: https://github.com/Automattic/node-canvas#compiling
 Once the prerequisites have been installed, you only need to install the modules.
 
 ```sh
-$ npm install
+$ npm install statosu_framework
 ```
-
-Please add `--production` option for normal use.
 
 ## Usage
 

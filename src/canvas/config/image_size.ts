@@ -21,6 +21,16 @@ class image_size {
 	 * Icon image height size
 	 */
 	static readonly icon_height: number = 256;
+
+	/**
+	 * Mode icon image width size
+	 */
+	static readonly mode_icon_width: number = 35;
+	
+	/**
+	 * Mode icon image height size
+	 */
+	static readonly mode_icon_height: number = 35;
 }
 
 export default image_size;

@@ -37,11 +37,26 @@ const db_data = {
 	events: []
 };
 
-test("Build Test", () => {
-	framework.create_image(twitter_data, db_data, osu_api_key, ripple_api_key)
-	.then(buffer => {
-	fs.writeFile(__dirname + "/" + `./Test_image.png`, buffer, err => {
-		if (err != null) throw new Error(err);
+describe("Build Test", () => {
+	test("create_image", async () => {
+		const buffer = await framework.create_image(twitter_data, db_data, osu_api_key, ripple_api_key);
+	
+		fs.writeFile(__dirname + "/" + "./Test_image.png", buffer, err => {
+			if (err != null) throw new Error(err);
+		});
 	});
-});
+
+	test("get_osu_status osu", async () => {
+		await framework.get_osu_status(twitter_data, osu_api_key, ripple_api_key);
+	});
+
+	test("get_osu_status ripple", async () => {
+		const ripple_player_data = {
+			osu_name: `[Fairy]Phy`,
+			osu_mode: 3,
+			osu_server: 1
+		};
+
+		await framework.get_osu_status(ripple_player_data, osu_api_key, ripple_api_key);
+	});
 });
