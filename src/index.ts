@@ -53,12 +53,12 @@ export async function create_image(db_twitter_config: any, db_osu_status: any, o
  * @param osu_api_key - Osu! official server api key
  * @param ripple_api_key - Osu! ripple server api key
  */
-export async function get_osu_status(db_player_data: any, osu_api_key: string, ripple_api_key: string): Promise<osu_status_entity> {
+export function get_osu_status(db_player_data: any, osu_api_key: string, ripple_api_key: string): Promise<osu_status_entity> {
 	if(typeof osu_api_key !== "string") throw new Error("Not string: osu_api_key");
 	if(typeof ripple_api_key !== "string") throw new Error("Not string: ripple_api_key");
 
 	const player_data = new twitter_config_entity(db_player_data);
 	logger.debug(player_data);
 
-	return await osu_status.get(player_data, osu_api_key, ripple_api_key);
+	return osu_status.get(player_data, osu_api_key, ripple_api_key);
 };

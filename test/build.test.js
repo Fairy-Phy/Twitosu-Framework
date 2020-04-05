@@ -22,7 +22,7 @@ const db_data = {
 	playcount: "19301",
 	ranked_score: "1030551234",
 	total_score: "7986184236",
-	pp_rank: "775",
+	pp_rank: "800000",
 	level: "95",
 	pp_raw: "8547.03",
 	accuracy: "97.30040313720703",

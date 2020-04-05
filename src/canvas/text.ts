@@ -128,8 +128,8 @@ class text {
 			if (update_global_rank < 0) {
 				let update_global_space: number = 0,
 					update_global_string: string = `+${-(update_global_rank)}`;
-				if (global_rank_string.length - update_global_string.length == 0) update_global_space = 5;
-				else update_global_space = (global_rank_string.length - update_global_string.length) * -25;
+				
+				update_global_space = ((global_rank_string.length + ((global_rank_string.length - 4) * -0.2)) - update_global_string.length) * -15;
 
 				canvas.image_edit.fillStyle = color.green;
 				canvas.image_edit.fillText(update_global_string, (image_size.image_width / 2) + global_rank_text.width + update_global_space, (image_size.image_height / 2) + 260);
@@ -137,8 +137,8 @@ class text {
 			else if (update_global_rank > 0) {
 				let update_global_space: number = 0,
 					update_global_string: string = `-${update_global_rank}`;
-				if (global_rank_string.length - update_global_string.length == 0) update_global_space = 5;
-				else update_global_space = (global_rank_string.length - update_global_string.length) * -25;
+				
+				update_global_space = ((global_rank_string.length + ((global_rank_string.length - 4) * -0.2)) - update_global_string.length) * -15;
 
 				canvas.image_edit.fillStyle = color.red;
 				canvas.image_edit.fillText(update_global_string, (image_size.image_width / 2) + global_rank_text.width + update_global_space, (image_size.image_height / 2) + 260);
@@ -186,8 +186,7 @@ class text {
 				let update_country_space: number = 0;
 				const update_country_text: string = `+${-(update_country_rank)}`;
 
-				if (country_rank_string.length - update_country_text.length == 0) update_country_space = 5;
-				else update_country_space = (country_rank_string.length - update_country_text.length) * -15;
+				update_country_space = ((country_rank_string.length + ((country_rank_string.length - 4) * -0.2)) - update_country_text.length) * -15;
 
 				canvas.image_edit.fillStyle = color.green;
 				canvas.image_edit.fillText(update_country_text, (image_size.image_width / 2) + country_rank_text.width + update_country_space, (image_size.image_height / 2) + 320);
@@ -195,8 +194,8 @@ class text {
 			else if (update_country_rank > 0) {
 				let update_country_space: number = 0;
 				const update_country_text: string = `-${update_country_rank}`;
-				if (country_rank_string.length - update_country_text.length == 0) update_country_space = 5;
-				else update_country_space = (country_rank_string.length - update_country_text.length) * -15;
+				
+				update_country_space = ((country_rank_string.length + ((country_rank_string.length - 4) * -0.2)) - update_country_text.length) * -15;
 
 				canvas.image_edit.fillStyle = color.red;
 				canvas.image_edit.fillText(update_country_text, (image_size.image_width / 2) + country_rank_text.width + update_country_space, (image_size.image_height / 2) + 320);

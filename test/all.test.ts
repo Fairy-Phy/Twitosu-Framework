@@ -42,6 +42,8 @@ describe("create_image Test", (): void => {
 	
 		const db_osu_status_data: osu_status_entity = db_osu_status == null || db_osu_status == undefined ? new osu_status_entity(api_osu_status_data) : new osu_status_entity(db_osu_status);
 		logger.debug(db_osu_status_data);
+		db_osu_status_data.pp_rank = 9999999;
+		db_osu_status_data.pp_country_rank = 99999;
 	
 		const icon_image: Image = await player_icon.get(api_osu_status_data.user_id, twitter_config_data.osu_server);
 	
@@ -80,6 +82,8 @@ describe("create_image Test", (): void => {
 	
 		const db_osu_status_data: osu_status_entity = db_osu_status == null || db_osu_status == undefined ? new osu_status_entity(api_osu_status_data) : new osu_status_entity(db_osu_status);
 		logger.debug(db_osu_status_data);
+		db_osu_status_data.pp_rank = 9999999;
+		db_osu_status_data.pp_country_rank = 99999;
 	
 		const icon_image: Image = await player_icon.get(api_osu_status_data.user_id, twitter_config_data.osu_server);
 	
@@ -118,6 +122,8 @@ describe("create_image Test", (): void => {
 	
 		const db_osu_status_data: osu_status_entity = db_osu_status == null || db_osu_status == undefined ? new osu_status_entity(api_osu_status_data) : new osu_status_entity(db_osu_status);
 		logger.debug(db_osu_status_data);
+		db_osu_status_data.pp_rank = 9999999;
+		db_osu_status_data.pp_country_rank = 99999;
 	
 		const icon_image: Image = await player_icon.get(api_osu_status_data.user_id, twitter_config_data.osu_server);
 	
@@ -234,9 +240,14 @@ describe("create_image Test", (): void => {
 		logger.debug(twitter_config_data);
 	
 		const api_osu_status_data: osu_status_entity = await osu_status.get(twitter_config_data, osu_api_key, ripple_api_key);
+		api_osu_status_data.pp_rank = 1;
+		api_osu_status_data.pp_country_rank = 1;
 		logger.debug(api_osu_status_data);
 	
 		const db_osu_status_data: osu_status_entity = db_osu_status == null || db_osu_status == undefined ? new osu_status_entity(api_osu_status_data) : new osu_status_entity(db_osu_status);
+		db_osu_status_data.accuracy = 100;
+		db_osu_status_data.playcount = 99999;
+		db_osu_status_data.pp_raw = 99999;
 		logger.debug(db_osu_status_data);
 	
 		const icon_image: Image = await player_icon.get(api_osu_status_data.user_id, twitter_config_data.osu_server);
@@ -353,7 +364,7 @@ describe("create_image Test", (): void => {
 			total_score: "7986184236",
 			pp_rank: "775",
 			level: "999",
-			pp_raw: "99999",
+			pp_raw: "8540",
 			accuracy: "97.26040313720703",
 			count_rank_ss: "499",
 			count_rank_ssh: "500",
