@@ -1,9 +1,9 @@
 {
-  "name": "statosu_framework",
+  "name": "twitosu-framework",
   "version": "1.1.1",
-  "description": "Statosu create image framework",
+  "description": "Twitosu create image framework",
   "keywords": [
-    "statosu",
+    "twitosu",
     "framework",
     "osu",
     "status",
@@ -11,13 +11,13 @@
     "canvas",
     "twitter"
   ],
-  "homepage": "https://github.com/Fairy-Phy/Statosu-Framework#readme",
+  "homepage": "https://github.com/Fairy-Phy/Twitosu-Framework#readme",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:Fairy-Phy/Statosu-Framework.git"
+    "url": "git+ssh://git@github.com:Fairy-Phy/Twitosu-Framework.git"
   },
   "bugs": {
-    "url": "https://github.com/Fairy-Phy/Statosu-Framework/issues"
+    "url": "https://github.com/Fairy-Phy/Twitosu-Framework/issues"
   },
   "main": "./build/index.js",
   "types": "./build/index.d.ts",

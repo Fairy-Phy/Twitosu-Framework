@@ -1,13 +1,13 @@
 <div align="center">
-<h1>Statosu Framework</h1>
-<a href="https://travis-ci.com/Fairy-Phy/Statosu-Framework"><img alt="Build Status" src="https://img.shields.io/travis/com/Fairy-Phy/Statosu-Framework/master?style=flat-square"></a>
-<a href="https://coveralls.io/github/Fairy-Phy/Statosu-Framework?branch=master"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/Fairy-Phy/Statosu-Framework/master?style=flat-square"></a>
-<a href="https://www.codefactor.io/repository/github/fairy-phy/statosu-framework/overview/master"><img src="https://img.shields.io/codefactor/grade/github/Fairy-Phy/statosu-framework/master?style=flat-square" alt="CodeFactor" /></a>
-<a href="https://packagephobia.now.sh/result?p=statosu_framework"><img alt="Install size" src="https://flat.badgen.net/packagephobia/install/statosu_framework"></a>
-<a href="https://www.npmjs.com/package/statosu_framework"><img alt="NPM Version" src="https://img.shields.io/npm/v/statosu_framework?style=flat-square"></a>
+<h1>Twitosu Framework</h1>
+<a href="https://travis-ci.com/Fairy-Phy/Twitosu-Framework"><img alt="Build Status" src="https://img.shields.io/travis/com/Fairy-Phy/Twitosu-Framework/master?style=flat-square"></a>
+<a href="https://coveralls.io/github/Fairy-Phy/Twitosu-Framework?branch=master"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/Fairy-Phy/Twitosu-Framework/master?style=flat-square"></a>
+<a href="https://www.codefactor.io/repository/github/fairy-phy/twitosu-framework/overview/master"><img src="https://img.shields.io/codefactor/grade/github/Fairy-Phy/twitosu-framework/master?style=flat-square" alt="CodeFactor" /></a>
+<a href="https://packagephobia.now.sh/result?p=twitosu-framework"><img alt="Install size" src="https://flat.badgen.net/packagephobia/install/twitosu-framework"></a>
+<a href="https://www.npmjs.com/package/twitosu-framework"><img alt="NPM Version" src="https://img.shields.io/npm/v/twitosu-framework?style=flat-square"></a>
 <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square"></a>
-<p>Statosu create image framework.</p>
-<p>I reworked the image creation of Statosu created last year as a framework!</p>
+<p>Twitosu create image framework.</p>
+<p>I reworked the image creation of Twitosu created last year as a framework!</p>
 </div>
 
 ## Installation
@@ -46,27 +46,27 @@ Quote: https://github.com/Automattic/node-canvas#compiling
 Once the prerequisites have been installed, you only need to install the modules.
 
 ```sh
-$ npm install statosu_framework
+$ npm install twitosu-framework
 ```
 
 ## Usage
 
 ```javascript
-const framework = require("statosu_framework");
+const framework = require("twitosu-framework");
 const fs = require("fs");
 
 const osu_api_key = ""; // osu!api(v1) token
 const ripple_api_key = ""; // Ripple API(v1) token
 
 const twitter_data = {
-    /* JSON data obtained from Statosu User twitter config database */
+    /* JSON data obtained from Twitosu User twitter config database */
     osu_name: "", // osu!(ripple) username
     osu_mode: 3, // 0 => Std, 1 => Taiko, 2 => Ctb, 3 => Mania
     osu_server: 0 // 0 => Official server, 1 => Ripple server
 };
 
 const db_data = {
-    /* JSON data obtained from Statosu Player data database */
+    /* JSON data obtained from Twitosu Player data database */
     /* JSON data is obtained from the API in advance at a predetermined time and stored */
     /* Not required, but will not allow comparison with previous data */
 };
@@ -88,4 +88,4 @@ Font in the image uses [Torus font](https://paulogoode.com/torus/).
 
 ## Licence
 
-Statosu framework is licensed under the [MIT License](https://opensource.org/licenses/MIT). Please see [the license file](LICENSE) for more information. Please also note that image fonts and [asset/icon/avatar-guest.png](asset/icon/avatar-guest.png) are another license. Please see [NDISCOVER/Exo-2.0](https://github.com/NDISCOVER/Exo-2.0), [googlefonts/comfortaa](https://github.com/googlefonts/comfortaa) and [ppy/osu-resources](https://github.com/ppy/osu-resources) repository for details.
+Twitosu Framework is licensed under the [MIT License](https://opensource.org/licenses/MIT). Please see [the license file](LICENSE) for more information. Please also note that image fonts and [asset/icon/avatar-guest.png](asset/icon/avatar-guest.png) are another license. Please see [NDISCOVER/Exo-2.0](https://github.com/NDISCOVER/Exo-2.0), [googlefonts/comfortaa](https://github.com/googlefonts/comfortaa) and [ppy/osu-resources](https://github.com/ppy/osu-resources) repository for details.
