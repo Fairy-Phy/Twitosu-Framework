@@ -31,18 +31,18 @@
   "author": "(Fairy)Phy",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.11.0",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^13.13.15",
     "@types/request-promise": "^4.1.46",
-    "jest": "^25.2.7",
-    "ts-jest": "^25.3.1",
-    "typescript": "^3.8.3"
+    "jest": "^25.5.4",
+    "ts-jest": "^25.5.1",
+    "typescript": "^3.9.7"
   },
   "dependencies": {
     "canvas": "^2.6.1",
-    "log4js": "^6.1.2",
+    "log4js": "^6.3.0",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5"
+    "request-promise": "^4.2.6"
   },
   "jest": {
     "notify": true,

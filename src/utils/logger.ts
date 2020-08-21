@@ -6,11 +6,8 @@ import {getLogger, Logger} from "log4js";
 const logger: Logger = getLogger("Framework");
 
 /* istanbul ignore next */
-if (process.argv[2] == "debug") {
+if (process.argv[2].toLowerCase() == "debug") {
 	logger.level = "debug";
-}
-else {
-	logger.level = "info";
 }
 
 export default logger;
